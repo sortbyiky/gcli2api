@@ -942,6 +942,8 @@ def gemini_to_anthropic_response(
         "usage": {
             "input_tokens": int(input_tokens or 0),
             "output_tokens": int(output_tokens or 0),
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
         },
     }
 
@@ -1059,7 +1061,7 @@ async def gemini_stream_to_anthropic_stream(
                             "content": [],
                             "stop_reason": None,
                             "stop_sequence": None,
-                            "usage": {"input_tokens": 0, "output_tokens": 0},
+                            "usage": {"input_tokens": 0, "output_tokens": 0, "cache_creation_input_tokens": 0, "cache_read_input_tokens": 0},
                         },
                     },
                 )
@@ -1254,6 +1256,8 @@ async def gemini_stream_to_anthropic_stream(
                 "delta": {"stop_reason": stop_reason, "stop_sequence": None},
                 "usage": {
                     "output_tokens": output_tokens,
+                    "cache_creation_input_tokens": 0,
+                    "cache_read_input_tokens": 0,
                 },
             },
         )
@@ -1276,7 +1280,7 @@ async def gemini_stream_to_anthropic_stream(
                         "content": [],
                         "stop_reason": None,
                         "stop_sequence": None,
-                        "usage": {"input_tokens": 0, "output_tokens": 0},
+                        "usage": {"input_tokens": 0, "output_tokens": 0, "cache_creation_input_tokens": 0, "cache_read_input_tokens": 0},
                     },
                 },
             )
