@@ -1,4 +1,4 @@
-full_hash=8529a8228bd1149dbbfa7c227ab9f469ed17eaea
-short_hash=8529a82
-message=fix: thinking 模式下 tool_use 消息格式错误
-date=2026-01-12 12:08:27 +0800
+full_hash=57b66d6823e245a1840a692765c67fbf0c12c42f
+short_hash=57b66d6
+message=Merge remote-tracking branch 'origin/master'
+date=2026-01-12 18:08:04 +0800
